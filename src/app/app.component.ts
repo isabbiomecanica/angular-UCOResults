@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import 'firebase/firestore';
 
 
 @Component({
@@ -8,5 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
-  title = 'Tour of Heroes'
+  title = 'Tour of Heroes';
+  constructor(firestore: AngularFirestore) {
+
+  }
 }
