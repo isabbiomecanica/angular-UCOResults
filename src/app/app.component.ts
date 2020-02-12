@@ -37,7 +37,7 @@ export class AppComponent  {
     // Use snapshotChanges().map() to store the key
     this.items = this.itemsRef.snapshotChanges().map(changes => {
       console.log(changes);
-      return changes.map(c => ({ key: c.payload.key, usuario: c.payload.val, ...c.payload.val() })      )
+      return changes.map(c => ({ key: c.payload.key, usuario: c.payload.val() })      )
       ;
     });
 
