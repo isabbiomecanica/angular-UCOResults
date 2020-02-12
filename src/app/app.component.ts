@@ -36,7 +36,11 @@ export class AppComponent  {
     this.itemsRef = afd.list('Usuarios');
     // Use snapshotChanges().map() to store the key
     this.items = this.itemsRef.snapshotChanges().map(changes => {
-      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() })      );
+      console.log(changes);
+      return changes.map(c => ({ key: c.payload.key, usuario: c.payload.val, ...c.payload.val() })      )
+      ;
     });
+
+
   }
 }
